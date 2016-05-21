@@ -1,6 +1,6 @@
 {
   "name": "vue-merge-component",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "merge vue component async to load",
   "main": "index.js",
   "scripts": {
