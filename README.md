@@ -3,6 +3,11 @@
 ```js
 
 Vue.use(require('vue-merge-component'))
+Vue.merge_component(['nvHeader','nvFooter','nvMenu'],(resolve)=>{
+	require(['./views/common/header.vue','./views/common/footer.vue','./views/common/menu.vue'], (nvHeader,nvFooter,nvMenu)=>{
+		resolve([nvHeader,nvFooter,nvMenu])
+	})
+})
 
 ```
 
@@ -14,5 +19,10 @@ example
 
 Vue.use(require('vue-resource'))
 Vue.use(require('vue-merge-component'))
+Vue.merge_component(['nvHeader','nvFooter','nvMenu'],(resolve)=>{
+	require(['./views/common/header.vue','./views/common/footer.vue','./views/common/menu.vue'], (nvHeader,nvFooter,nvMenu)=>{
+		resolve([nvHeader,nvFooter,nvMenu])
+	})
+})
 
 ```
