@@ -20,7 +20,9 @@
                     Vue.component(t, function(resolve) {
                         load.then(function(res) {
                             _res = res || _res
-                            resolve(_res[i])
+                            Vue.nextTick(function () {
+                                resolve(_res[i])
+                            })
                         })
                     })
                 })
